@@ -1,0 +1,18 @@
+package db;
+
+public class DbIntegrityException extends RuntimeException {
+
+	
+	private static final long serialVersionUID = 1L;
+	
+	public DbIntegrityException(String msg) {
+		super(msg);
+	}
+
+	// EXCEPTION USADA PARA O PROGRAMA ACUSAR ERRO QUANDO QUER
+	// DELETAR DADOS DE UMA TABELA QUE SE RELACIONA COM OUTRA.
+	// EXEMPLO TABELA 1 USA CHAVE PRIMARIA DA TABELA 2 (CHAVE SECUNDARIA
+	// NA TABELA 1). QUANDO SE TEM O COMANDO "DELETE" NA TABELA 2, O PROGRAMA
+	// LANÇA UMA EXCEPTION DIZENDO QUE NÃO PODE DELETAR CHAVE SECUNDARIA.
+	
+}
